@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Biodata Diri"
+            android:textColor="#FFFFFF"
             android:paddingLeft="20dp"
             android:gravity="center_vertical"
             android:fontFamily="casual"
@@ -68,6 +69,7 @@
             android:inputType="textMultiLine"/>
 
         <Button
+            android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Simpan"

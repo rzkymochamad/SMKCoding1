@@ -15,7 +15,9 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         val animation = AnimationUtils.loadAnimation(this, R.anim.splash)
+        val animation2 = AnimationUtils.loadAnimation(this, R.anim.frombottom)
         logo.startAnimation(animation)
+        text.startAnimation(animation2)
 
         handler = Handler()
         handler.postDelayed({

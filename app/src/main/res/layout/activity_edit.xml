@@ -21,7 +21,7 @@
             android:fontFamily="casual"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#008172"/>
+            android:background="#00BCD4"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -34,8 +34,10 @@
         <EditText
             android:id="@+id/editNama"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_margin="16dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/round"
             android:hint="Nama"/>
 
         <Button
@@ -43,6 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Simpan"
+            android:background="@drawable/btn_round"
             android:layout_margin="16dp"/>
 
     </LinearLayout>

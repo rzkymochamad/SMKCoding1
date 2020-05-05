@@ -11,7 +11,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/logo"
+        android:background="@drawable/grafik"
         android:layout_above="@+id/abc"/>
 
     <LinearLayout
@@ -25,9 +25,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="My Biodata"
+        android:id="@+id/text"
+        android:fontFamily="monospace"
         android:layout_below="@+id/abc"
         android:textSize="32sp"
-        android:textColor="#18ED26"
+        android:textColor="#00BCD4"
         android:gravity="center"/>
 
 

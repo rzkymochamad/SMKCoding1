@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".EditActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -23,58 +23,30 @@
             android:textStyle="bold"
             android:background="#008172"/>
 
-        <EditText
-            android:id="@+id/txt_nama"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nama"
-            android:layout_margin="16dp"/>
-
-        <Spinner
-            android:id="@+id/txt_jk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:text="Edit Profil"
+            android:textSize="20dp"
             android:layout_margin="16dp"
-            android:entries="@array/jenis_kelamin"/>
+            android:gravity="center"/>
 
         <EditText
-            android:id="@+id/txt_umur"
+            android:id="@+id/editNama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:hint="Umur (Th)"
-            android:inputType="number"/>
-
-        <EditText
-            android:id="@+id/txt_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:hint="Email"/>
-
-        <EditText
-            android:id="@+id/txt_telp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:hint="Telp"
-            android:inputType="phone"/>
-
-        <EditText
-            android:id="@+id/txt_alamat"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_margin="16dp"
-            android:hint="Alamat"
-            android:inputType="textMultiLine"/>
+            android:hint="Nama"/>
 
         <Button
-            android:id="@+id/btnSave"
+            android:id="@+id/btnSaveEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Simpan"
             android:layout_margin="16dp"/>
 
     </LinearLayout>
+
+
 
 </LinearLayout>

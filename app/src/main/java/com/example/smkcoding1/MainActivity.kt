@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         setDataSpinnerGender()
 
-        btnSave.setOnClickListener { goToProfilActivity() }
+        btnSave.setOnClickListener { validasiInput() }
     }
 
     private fun setDataSpinnerGender() {
@@ -25,6 +26,26 @@ class MainActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         txt_jk.adapter = adapter
+    }
+
+    private fun validasiInput(){
+        when{
+            txt_nama.text.toString().isEmpty() -> txt_nama.error = "Nama Tidak Boleh Kosong"
+            txt_jk.selectedItem.toString().equals("Pilih Jenis Kelamin", ignoreCase = true) -> tampilToast("Jenis Kelamin harus dipilih!")
+            txt_umur.text.toString().isEmpty() -> txt_umur.error = "Umur Tidak Boleh Kosong"
+            txt_email.text.toString().isEmpty() -> txt_email.error = "Email Tidak Boleh Kosong"
+            txt_telp.text.toString().isEmpty() -> txt_telp.error = "No Telp Tidak Boleh Kosong"
+            txt_alamat.text.toString().isEmpty() -> txt_alamat.error = "Alamat Tidak Boleh Kosong"
+
+            else -> {
+                tampilToast("Berhasil")
+                goToProfilActivity()
+            }
+        }
+    }
+
+    private fun tampilToast(pesan: String) {
+        Toast.makeText(this, pesan, Toast.LENGTH_SHORT).show()
     }
 
     private fun goToProfilActivity() {

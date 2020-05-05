@@ -2,6 +2,7 @@ package com.example.smkcoding1
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -17,6 +18,16 @@ class ProfilActivity : AppCompatActivity() {
         ambilData()
 
         btnEdit.setOnClickListener { goToEditActivity() }
+        btnDial.setOnClickListener { goToDialActivity(txtTelp.text.toString()) }
+    }
+
+    private fun goToDialActivity(telp: String) {
+        val intent = Intent(Intent.ACTION_DIAL).apply {
+            data = Uri.parse("tel:$telp")
+        }
+        if (intent.resolveActivity(packageManager) != null){
+            startActivity(intent)
+        }
     }
 
     private fun ambilData() {
